@@ -4,7 +4,11 @@
 	"description": "",
 	"main": "index.js",
 	"scripts": {
-		"build": "webpack --mode production"
+		"compile:sass": "node-sass src/sass/main.scss dist/css/stylesheet.css",
+		"dev": "webpack --mode development",
+		"build": "webpack --mode production",
+		"start": "node server.js",
+		"heroku-postbuild": "webpack -p"
 	},
 	"author": "GB",
 	"license": "ISC",
@@ -21,6 +25,7 @@
 	"dependencies": {
 		"axios": "^0.20.0",
 		"core-js": "^3.6.5",
+		"express": "^4.17.1",
 		"fractional": "^1.0.0",
 		"regenerator-runtime": "^0.13.7",
 		"uniqid": "^5.2.0"
