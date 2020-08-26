@@ -1,0 +1,98 @@
+.results {
+	padding: 3rem 0;
+
+	&__list {
+		list-style: none;
+	}
+
+	&__link {
+		&:link,
+		&:visited {
+			display: flex;
+			display: flex;
+			align-items: center;
+			padding: 1.5rem 3rem;
+			transition: all 0.3s;
+			border-right: 1px solid $white;
+			text-decoration: none;
+		}
+
+		&:hover {
+			background-color: $pink-pale;
+			transform: translateY(-2px);
+		}
+
+		&--active {
+			background-color: $pink-pale;
+		}
+	}
+
+	&__fig {
+		flex: 0 0 5.5rem;
+		border-radius: 50%;
+		overflow: hidden;
+		height: 5.5rem;
+		margin-right: 2rem;
+		position: relative;
+		backface-visibility: hidden;
+
+		&::before {
+			content: '';
+			display: block;
+			height: 100%;
+			width: 100%;
+			position: absolute;
+			top: 0;
+			left: 0;
+			background-image: linear-gradient(
+				to right bottom,
+				$pink-light,
+				$pink-dark
+			);
+			opacity: 0.4;
+		}
+
+		& img {
+			display: block;
+			width: 100%;
+			height: 100%;
+			object-fit: cover;
+			transition: all 0.3s;
+		}
+	}
+
+	&__name {
+		font-size: 1.3rem;
+		color: $pink-dark;
+		text-transform: uppercase;
+		font-weight: 600;
+		margin-bottom: 0.3rem;
+	}
+
+	&__author {
+		font-size: 1.1rem;
+		color: $brown-pale;
+		text-transform: uppercase;
+		font-weight: 600;
+	}
+
+	&__pages {
+		margin-top: 3rem;
+		padding: 0 3rem;
+
+		&::after {
+			content: '';
+			display: table;
+			clear: both;
+		}
+	}
+
+	&__btn--prev {
+		float: left;
+		flex-direction: row-reverse;
+	}
+
+	&__btn--next {
+		float: right;
+	}
+}

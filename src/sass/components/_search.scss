@@ -1,0 +1,30 @@
+.search {
+	background-color: $white;
+	border-radius: 10rem;
+	display: flex;
+	align-items: center;
+	padding-left: 3rem;
+	transition: all 0.3s;
+
+	&:focus-within {
+		transform: translateY(-2px);
+		box-shadow: 0 0.7rem 3rem rgba($brown-light, 0.08);
+	}
+
+	&__field {
+		border: none;
+		background: none;
+		font-family: inherit;
+		color: inherit;
+		font-size: 1.7rem;
+		width: 30rem;
+
+		&:focus {
+			outline: none;
+		}
+
+		&::placeholder {
+			color: $white-brown;
+		}
+	}
+}

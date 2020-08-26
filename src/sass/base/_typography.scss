@@ -1,0 +1,20 @@
+.heading-2 {
+	font-size: 1.8rem;
+	font-weight: 600;
+	color: $pink-dark;
+	text-transform: uppercase;
+	margin-bottom: 2.5rem;
+	text-align: center;
+	transform: skewY(-3deg);
+}
+
+.copyright {
+	color: $brown-pale;
+	font-size: 1.2rem;
+	margin-top: auto;
+}
+
+.link:link,
+.link:visited {
+	color: $brown-pale;
+}

@@ -1,0 +1,140 @@
+.likes {
+	position: relative;
+	align-self: stretch;
+
+	padding: 0 !important;
+	&__field {
+		cursor: pointer;
+		padding: 0 4rem;
+		display: flex;
+		align-items: center;
+		height: 100%;
+		transition: all 0.3s;
+		&:hover {
+			background-color: $white-green;
+		}
+	}
+
+	&__panel:hover,
+	&__field:hover + &__panel {
+		visibility: visible;
+		opacity: 1;
+	}
+
+	&__icon {
+		fill: $pink-light;
+		height: 3.75rem;
+		width: 3.75rem;
+	}
+
+	&__panel {
+		position: absolute;
+		right: 0;
+		top: 10rem;
+		z-index: 10;
+		padding: 2rem 0;
+		width: 34rem;
+		background-color: $white;
+		box-shadow: 0 0.8rem 5rem 2rem rgba($brown-light, 0.102);
+		visibility: hidden;
+		opacity: 0;
+		transition: all 0.5s 0.2s;
+	}
+
+	padding: 3rem 0;
+
+	&__list {
+		list-style: none;
+	}
+
+	&__link {
+		&:link,
+		&:visited {
+			display: flex;
+			display: flex;
+			align-items: center;
+			padding: 1.5rem 3rem;
+			transition: all 0.3s;
+			border-right: 1px solid $white;
+			text-decoration: none;
+		}
+
+		&:hover {
+			background-color: $pink-pale;
+			transform: translateY(-2px);
+		}
+
+		&--active {
+			background-color: $pink-pale;
+		}
+	}
+
+	&__fig {
+		flex: 0 0 5.5rem;
+		border-radius: 50%;
+		overflow: hidden;
+		height: 5.5rem;
+		margin-right: 2rem;
+		position: relative;
+		backface-visibility: hidden;
+
+		&::before {
+			content: '';
+			display: block;
+			height: 100%;
+			width: 100%;
+			position: absolute;
+			top: 0;
+			left: 0;
+			background-image: linear-gradient(
+				to right bottom,
+				$pink-light,
+				$pink-dark
+			);
+			opacity: 0.4;
+		}
+
+		& img {
+			display: block;
+			width: 100%;
+			height: 100%;
+			object-fit: cover;
+			transition: all 0.3s;
+		}
+	}
+
+	&__name {
+		font-size: 1.3rem;
+		color: $pink-light;
+		text-transform: uppercase;
+		font-weight: 600;
+		margin-bottom: 0.3rem;
+	}
+
+	&__author {
+		font-size: 1.1rem;
+		color: $brown-pale;
+		text-transform: uppercase;
+		font-weight: 600;
+	}
+
+	&__pages {
+		margin-top: 3rem;
+		padding: 0 3rem;
+
+		&::after {
+			content: '';
+			display: table;
+			clear: both;
+		}
+	}
+
+	&__btn--prev {
+		float: left;
+		flex-direction: row-reverse;
+	}
+
+	&__btn--next {
+		float: right;
+	}
+}

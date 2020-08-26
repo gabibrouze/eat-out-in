@@ -1,0 +1,127 @@
+.btn {
+	padding: 1.3rem 3rem;
+	font-size: 1.4rem;
+
+	& svg {
+		height: 2.25rem;
+		width: 2.25rem;
+		fill: currentColor;
+	}
+
+	&,
+	&-small,
+	&-small:link,
+	&-small:visited {
+		background-image: linear-gradient(
+			to right bottom,
+			$white-green,
+			$pink-light
+		);
+		border-radius: 10rem;
+		border: none;
+		text-transform: uppercase;
+		font-weight: bolder;
+		color: #fff;
+		cursor: pointer;
+		display: flex;
+		align-items: center;
+		transition: all 0.2s;
+	}
+
+	&-small,
+	&-small:link,
+	&-small:visited {
+		font-size: 1.3rem;
+		padding: 1rem 1.75rem;
+		text-decoration: none;
+	}
+
+	&-small svg,
+	&-small:link svg,
+	&-small:visited svg {
+		height: 1.5rem;
+		width: 1.5rem;
+		fill: currentColor;
+	}
+
+	&:hover,
+	&-small:hover {
+		transform: scale(1.05);
+	}
+
+	&:focus,
+	&-small:focus {
+		outline: none;
+	}
+
+	& > *:first-child,
+	&-small > *:first-child {
+		margin-right: 1rem;
+	}
+
+	&-inline {
+		color: $pink-dark;
+		font-size: 1.2rem;
+		border-radius: 10rem;
+		border: none;
+		background-color: $pink-pale;
+		padding: 0.8rem 1.2rem;
+		cursor: pointer;
+		display: flex;
+		align-items: center;
+		transition: all 0.2s;
+
+		& svg {
+			height: 1.5rem;
+			width: 1.5rem;
+			fill: currentColor;
+			margin: 0 0.2rem;
+		}
+
+		& span {
+			margin: 0 0.4rem;
+		}
+
+		&:hover {
+			color: $pink-light;
+			background-color: $white-green;
+		}
+
+		&:focus {
+			outline: none;
+		}
+	}
+
+	&-tiny {
+		height: 1.75rem;
+		width: 1.75rem;
+		border: none;
+		background: none;
+		cursor: pointer;
+
+		& svg {
+			height: 100%;
+			width: 100%;
+			fill: $pink-dark;
+			transition: all 0.3s;
+		}
+
+		&:focus {
+			outline: none;
+		}
+
+		&:hover svg {
+			fill: $pink-light;
+			transform: translateY(-1px);
+		}
+
+		&:active svg {
+			fill: $pink-light;
+			transform: translateY(0);
+		}
+
+		&:not(:last-child) {
+			margin-right: 0.3rem;
+		}
+	}
+}
